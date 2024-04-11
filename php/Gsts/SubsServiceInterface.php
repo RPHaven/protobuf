@@ -9,7 +9,7 @@ use Spiral\RoadRunner\GRPC;
 interface SubsServiceInterface extends GRPC\ServiceInterface
 {
     // GRPC specific service name.
-    public const NAME = "rphaven.gsts.SubsService";
+    public const NAME = "rphaven.gsts.v1.SubsService";
 
     /**
     * @param GRPC\ContextInterface $ctx
