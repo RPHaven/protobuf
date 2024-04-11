@@ -17,7 +17,9 @@
     "spiral/roadrunner-grpc": "^3.2"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.42"
+    "ergebnis/composer-normalize": "^2.42",
+    "symfony/uid": "^7.0",
+    "symfony/dotenv": "^7.0"
   },
   "archive": {
     "exclude": ["*", "!/php", "!/proto"]
@@ -25,7 +27,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Rphaven\\Protobuf\\": "php/"
+      "RpHaven\\Protobuf\\": "php/"
     }
   },
   "config": {

@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  grpc:
+    build:
+      context: ./
+      dockerfile: dev/docker/php/Dockerfile
+      target: proto
+      args:
+        GITHUB_TOKEN: "${GITHUB_TOKEN?err}"
+    environment:
+      - "SUBS_SERVER=${SUBS_SERVER?err}"
+    volumes:
+      - ./:/RPHaven
+    networks:
+      default:
+
+networks:
+  default:
+    name: grpc
+    external: true

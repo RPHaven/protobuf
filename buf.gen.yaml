@@ -4,11 +4,11 @@ managed:
   enabled: true
   override:
     PHP_NAMESPACE:
-      rphaven/gsts/v1/member_sub.proto: RpHaven\Protobuf\Gsts
-      rphaven/gsts/v1/subs.proto: RpHaven\Protobuf\Gsts
+      gsts/v1/member_sub.proto: RpHaven\Protobuf\Gsts
+      gsts/v1/subs.proto: RpHaven\Protobuf\Gsts
     PHP_METADATA_NAMESPACE:
-      rphaven/gsts/v1/member_sub.proto: RpHaven\Protobuf\Metadata\Gsts
-      rphaven/gsts/v1/subs.proto: RpHaven\Protobuf\Metadata\Gsts
+      gsts/v1/member_sub.proto: RpHaven\Protobuf\Metadata\Gsts
+      gsts/v1/subs.proto: RpHaven\Protobuf\Metadata\Gsts
 plugins:
   # dependencies
   - plugin: buf.build/community/roadrunner-server-php-grpc:v4.6.7

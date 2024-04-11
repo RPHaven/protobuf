@@ -3,9 +3,9 @@ syntax = "proto3";
 option php_namespace = "RpHaven\\Grpc\\Protobuf";
 option php_metadata_namespace = "RpHaven\\Grpc\\Metadata";
 
-package rphaven.gsts;
+package rphaven.gsts.v1;
 
-import "rphaven/gsts/v1/member_sub.proto";
+import "gsts/v1/member_sub.proto";
 
 service SubsService {
   rpc Session (MemberSub) returns (SubAccepted) {

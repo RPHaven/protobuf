@@ -24,7 +24,7 @@ class SubsServiceClient extends \Grpc\BaseStub {
      */
     public function Session(\RpHaven\Protobuf\Gsts\MemberSub $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/rphaven.gsts.SubsService/Session',
+        return $this->_simpleRequest('/rphaven.gsts.v1.SubsService/Session',
         $argument,
         ['\RpHaven\Protobuf\Gsts\SubAccepted', 'decode'],
         $metadata, $options);

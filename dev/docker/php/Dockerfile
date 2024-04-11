@@ -1,6 +1,5 @@
 ARG PHP_IMAGE_APP_VERSION="cli-bullseye"
 
-
 FROM "php:${PHP_IMAGE_APP_VERSION}" as base
 RUN apt update
 RUN apt install -y libyaml-dev libicu-dev libsodium-dev
@@ -21,7 +20,7 @@ RUN wget 'https://phar.phpunit.de/phpcov.phar'
 
 FROM base AS composer
 WORKDIR /composer
-ADD dev/docker/gsts/composer.sh ./
+ADD dev/docker/php/composer.sh ./
 RUN chmod +x ./composer.sh
 RUN ./composer.sh
 
@@ -43,6 +42,7 @@ ADD ./.env ./
 ADD ./composer.json ./
 ADD ./composer.lock ./
 ADD ./php ./php
+ADD ./proto ./proto
 
 RUN mkdir -p /root/.composer
 RUN ${LOCAL_BIN_PATH}/composer config --global --auth github-oauth.github.com ${GITHUB_TOKEN}
@@ -76,6 +76,6 @@ RUN chmod +x "${LOCAL_BIN_PATH}/phpcov"
 RUN pecl install xdebug
 RUN apt install -y git
 RUN docker-php-ext-enable xdebug
-ADD dev/docker/gsts/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+ADD dev/docker/php/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 
