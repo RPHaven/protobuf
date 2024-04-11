@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option php_namespace = "RpHaven\\Grpc\\Protobuf";
+option php_metadata_namespace = "RpHaven\\Grpc\\Metadata";
+
+package rphaven.gsts;
+
+import "google/protobuf/timestamp.proto";
+
+message MemberSub {
+  bytes volunteer_id = 1;
+  string member_uri = 2;
+}
+
+
+message SubAccepted {
+  int32 tokens_remaining = 1;
+  string volunteer_name = 2;
+  string member_name = 3;
+  google.protobuf.Timestamp last_updated = 4;
+  bytes transaction_id = 5;
+}
