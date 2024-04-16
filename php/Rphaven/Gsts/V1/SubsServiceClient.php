@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace RpHaven\Protobuf\Gsts;
+namespace Rphaven\Gsts\V1;
 
 /**
  */
@@ -17,16 +17,16 @@ class SubsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \RpHaven\Protobuf\Gsts\MemberSub $argument input argument
+     * @param \Rphaven\Gsts\V1\ConsumeMemberToken $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function Session(\RpHaven\Protobuf\Gsts\MemberSub $argument,
+    public function Session(\Rphaven\Gsts\V1\ConsumeMemberToken $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/rphaven.gsts.v1.SubsService/Session',
         $argument,
-        ['\RpHaven\Protobuf\Gsts\SubAccepted', 'decode'],
+        ['\Rphaven\Gsts\V1\TokensConsumed', 'decode'],
         $metadata, $options);
     }
 

@@ -1,22 +1,45 @@
 syntax = "proto3";
 
-option php_namespace = "RpHaven\\Grpc\\Protobuf";
-option php_metadata_namespace = "RpHaven\\Grpc\\Metadata";
-
 package rphaven.gsts.v1;
 
 import "google/protobuf/timestamp.proto";
 
-message MemberSub {
-  bytes volunteer_id = 1;
-  string member_uri = 2;
+import "gsts/v1/meet.proto";
+import "gsts/v1/token.proto";
+
+message ConsumeMemberToken {
+  Member member = 1;
+  Member volunteer = 2;
+  Meet meet = 3;
+  repeated Token tokens = 4;
 }
 
-
-message SubAccepted {
-  int32 tokens_remaining = 1;
-  string volunteer_name = 2;
-  string member_name = 3;
-  google.protobuf.Timestamp last_updated = 4;
-  bytes transaction_id = 5;
+message TokenConsumption {
+  oneof result {
+    TokensConsumed success = 1;
+    TokensNotConsumed error = 2;
+  }
 }
+
+message TokensConsumed {
+    TokenTransaction transaction = 1;
+}
+
+message TokenTransaction {
+  bytes transaction_id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  Member member = 3;
+  Member volunteer = 4;
+  repeated Token tokens = 5;
+}
+
+message TokensNotConsumed {
+  TokenTransaction transaction = 1;
+}
+
+message Member {
+  bytes id = 1;
+  string username = 2;
+  string name = 3;
+}
+

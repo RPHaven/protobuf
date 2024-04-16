@@ -26,8 +26,8 @@
   },
   "minimum-stability": "stable",
   "autoload": {
-    "psr-4": {
-      "RpHaven\\Protobuf\\": "php/"
+    "psr-0": {
+      "Rphaven\\Gsts\\V1\\": "php/"
     }
   },
   "config": {
