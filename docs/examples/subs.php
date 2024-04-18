@@ -6,6 +6,7 @@ use Google\Protobuf\Timestamp;
 use Rphaven\Gsts\V1\ConsumeMemberToken;
 use Rphaven\Gsts\V1\Meet;
 use Rphaven\Gsts\V1\Member;
+use Rphaven\Gsts\V1\Signature;
 use Rphaven\Gsts\V1\SubsServiceClient;
 use Rphaven\Gsts\V1\Token;
 use Rphaven\Gsts\V1\Venue;
@@ -47,8 +48,10 @@ $token = new Token([
     'issued' => $now,
     'issue_number' => 3,
     'member' => $member->getId(),
-    'status' => 0,
-    'signature' => UuidV6::v6()->toBinary(),
+    'signature' => new Signature([
+        'key'   => UuidV6::v6()->toBinary(),
+        'hash'  => UuidV6::v6()->toBinary(),
+    ]),
 ]);
 
 $venue = new Venue([

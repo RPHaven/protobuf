@@ -7,19 +7,13 @@ package rphaven.gsts.v1;
 
 import "google/protobuf/timestamp.proto";
 
-enum Status {
-  TOKEN_ISSUED = 0;
-  TOKEN_CONSUMED = 1;
-}
-
 message Token {
   bytes id = 1;
   google.protobuf.Timestamp issued = 2;
   sint32 issue_number = 3;
   bytes member = 4;
-  Status status = 5;
-  Signature signature = 6;
-  optional google.protobuf.Timestamp consumed = 7;
+  Signature signature = 5;
+  optional google.protobuf.Timestamp consumed = 6;
 }
 
 message Signature {

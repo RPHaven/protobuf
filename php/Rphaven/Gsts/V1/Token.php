@@ -30,15 +30,11 @@ class Token extends \Google\Protobuf\Internal\Message
      */
     protected $member = '';
     /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Status status = 5 [json_name = "status"];</code>
-     */
-    protected $status = 0;
-    /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 5 [json_name = "signature"];</code>
      */
     protected $signature = null;
     /**
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 7 [json_name = "consumed"];</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 6 [json_name = "consumed"];</code>
      */
     protected $consumed = null;
 
@@ -52,7 +48,6 @@ class Token extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $issued
      *     @type int $issue_number
      *     @type string $member
-     *     @type int $status
      *     @type \Rphaven\Gsts\V1\Signature $signature
      *     @type \Google\Protobuf\Timestamp $consumed
      * }
@@ -161,29 +156,7 @@ class Token extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Status status = 5 [json_name = "status"];</code>
-     * @return int
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Status status = 5 [json_name = "status"];</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setStatus($var)
-    {
-        GPBUtil::checkEnum($var, \Rphaven\Gsts\V1\Status::class);
-        $this->status = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 5 [json_name = "signature"];</code>
      * @return \Rphaven\Gsts\V1\Signature|null
      */
     public function getSignature()
@@ -202,7 +175,7 @@ class Token extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 5 [json_name = "signature"];</code>
      * @param \Rphaven\Gsts\V1\Signature $var
      * @return $this
      */
@@ -215,7 +188,7 @@ class Token extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 7 [json_name = "consumed"];</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 6 [json_name = "consumed"];</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getConsumed()
@@ -234,7 +207,7 @@ class Token extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 7 [json_name = "consumed"];</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 6 [json_name = "consumed"];</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

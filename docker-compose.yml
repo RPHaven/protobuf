@@ -7,9 +7,9 @@ services:
       dockerfile: dev/docker/php/Dockerfile
       target: proto
       args:
-        GITHUB_TOKEN: "${GITHUB_TOKEN?err}"
+        GITHUB_TOKEN: "${GITHUB_TOKEN}"
     environment:
-      - "SUBS_SERVER=${SUBS_SERVER?err}"
+      - "SUBS_SERVER=${SUBS_SERVER}"
     volumes:
       - ./:/RPHaven
     networks:
