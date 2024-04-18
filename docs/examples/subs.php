@@ -9,6 +9,7 @@ use Rphaven\Gsts\V1\Member;
 use Rphaven\Gsts\V1\SubsServiceClient;
 use Rphaven\Gsts\V1\Token;
 use Rphaven\Gsts\V1\Venue;
+use RpHaven\Uid\Factory\MemberUid;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Uid\UuidV6;
 
@@ -20,17 +21,19 @@ $client = new SubsServiceClient(getenv('SUBS_SERVER'), [
     'credentials' => Grpc\ChannelCredentials::createInsecure()
 ]);
 
-$member = 'https://rphaven.co.uk/member/123456';
-$volunteerId = UuidV6::v6()->toBinary();
+$memberFactory = new MemberUid();
+
+$volunteerId = $memberFactory->member(new DateTimeImmutable('-48 hours'))->toBinary();
+$playerId = $memberFactory->member(new DateTimeImmutable('-1 years'))->toBinary();
 
 $member = new Member([
-    'id'        => UuidV6::v6()->toBinary(),
+    'id'        => $volunteerId,
     'username'  => 'shrikeh',
     'name'      => 'Barney',
 ]);
 
 $volunteer = new Member([
-    'id'        => UuidV6::v6()->toBinary(),
+    'id'        => $playerId,
     'username'  => 'oli',
     'name'      => 'Oli',
 ]);

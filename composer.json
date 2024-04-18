@@ -19,7 +19,8 @@
   "require-dev": {
     "ergebnis/composer-normalize": "^2.42",
     "symfony/uid": "^7.0",
-    "symfony/dotenv": "^7.0"
+    "symfony/dotenv": "^7.0",
+    "rphaven/uid": "*"
   },
   "archive": {
     "exclude": ["*", "!/php", "!/proto"]
@@ -40,5 +41,11 @@
       "indent-size": 2,
       "indent-style": "space"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rphaven/uid"
+    }
+  ]
 }

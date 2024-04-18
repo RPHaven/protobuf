@@ -18,6 +18,11 @@ message Token {
   sint32 issue_number = 3;
   bytes member = 4;
   Status status = 5;
-  bytes signature = 6;
+  Signature signature = 6;
   optional google.protobuf.Timestamp consumed = 7;
+}
+
+message Signature {
+  bytes key = 1;
+  bytes hash = 2;
 }

@@ -34,9 +34,9 @@ class Token extends \Google\Protobuf\Internal\Message
      */
     protected $status = 0;
     /**
-     * Generated from protobuf field <code>bytes signature = 6 [json_name = "signature"];</code>
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
      */
-    protected $signature = '';
+    protected $signature = null;
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp consumed = 7 [json_name = "consumed"];</code>
      */
@@ -53,7 +53,7 @@ class Token extends \Google\Protobuf\Internal\Message
      *     @type int $issue_number
      *     @type string $member
      *     @type int $status
-     *     @type string $signature
+     *     @type \Rphaven\Gsts\V1\Signature $signature
      *     @type \Google\Protobuf\Timestamp $consumed
      * }
      */
@@ -183,22 +183,32 @@ class Token extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes signature = 6 [json_name = "signature"];</code>
-     * @return string
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
+     * @return \Rphaven\Gsts\V1\Signature|null
      */
     public function getSignature()
     {
         return $this->signature;
     }
 
+    public function hasSignature()
+    {
+        return isset($this->signature);
+    }
+
+    public function clearSignature()
+    {
+        unset($this->signature);
+    }
+
     /**
-     * Generated from protobuf field <code>bytes signature = 6 [json_name = "signature"];</code>
-     * @param string $var
+     * Generated from protobuf field <code>.rphaven.gsts.v1.Signature signature = 6 [json_name = "signature"];</code>
+     * @param \Rphaven\Gsts\V1\Signature $var
      * @return $this
      */
     public function setSignature($var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkMessage($var, \Rphaven\Gsts\V1\Signature::class);
         $this->signature = $var;
 
         return $this;
