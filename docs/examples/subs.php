@@ -27,7 +27,7 @@ $memberFactory = new MemberUid();
 $volunteerId = $memberFactory->member(new DateTimeImmutable('-48 hours'))->toBinary();
 $playerId = $memberFactory->member(new DateTimeImmutable('-1 years'))->toBinary();
 
-$member = new Member([
+$player = new Member([
     'id'        => $volunteerId,
     'username'  => 'shrikeh',
     'name'      => 'Barney',
@@ -40,6 +40,11 @@ $volunteer = new Member([
 ]);
 
 
+$wallet = new \Rphaven\Gsts\V1\Wallet([
+    'id' => UuidV6::v6()->toBinary(),
+    'player' => $player
+]);
+
 $now = new Timestamp();
 $now->fromDateTime(new DateTime());
 
@@ -47,7 +52,7 @@ $token = new Token([
     'id' => UuidV6::v6()->toBinary(),
     'issued' => $now,
     'issue_number' => 3,
-    'member' => $member->getId(),
+    'member' => $player->getId(),
     'signature' => new Signature([
         'key'   => UuidV6::v6()->toBinary(),
         'hash'  => UuidV6::v6()->toBinary(),
@@ -67,7 +72,7 @@ $meet = new Meet([
 ]);
 
 $consumeMemberToken = new ConsumeMemberToken([
-    'member' => $member,
+    'wallet' => $wallet,
     'volunteer' => $volunteer,
     'meet'  => $meet,
     'tokens' => [$token]

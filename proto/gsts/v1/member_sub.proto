@@ -8,7 +8,7 @@ import "gsts/v1/meet.proto";
 import "gsts/v1/token.proto";
 
 message ConsumeMemberToken {
-  Member member = 1;
+  Wallet wallet = 1;
   Member volunteer = 2;
   Meet meet = 3;
   repeated Token tokens = 4;
@@ -35,6 +35,11 @@ message TokenTransaction {
 
 message TokensNotConsumed {
   TokenTransaction transaction = 1;
+}
+
+message Wallet {
+  bytes id = 1;
+  Member member = 2;
 }
 
 message Member {
