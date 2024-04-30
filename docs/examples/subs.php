@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Google\Protobuf\Timestamp;
 use Rphaven\Gsts\V1\ConsumeMemberToken;
+use Rphaven\Gsts\V1\ConsumptionDetails;
 use Rphaven\Gsts\V1\Meet;
 use Rphaven\Gsts\V1\Member;
 use Rphaven\Gsts\V1\Signature;
@@ -28,13 +29,13 @@ $volunteerId = $memberFactory->member(new DateTimeImmutable('-48 hours'))->toBin
 $playerId = $memberFactory->member(new DateTimeImmutable('-1 years'))->toBinary();
 
 $player = new Member([
-    'id'        => $volunteerId,
+    'id'        => $playerId,
     'username'  => 'shrikeh',
     'name'      => 'Barney',
 ]);
 
 $volunteer = new Member([
-    'id'        => $playerId,
+    'id'        => $volunteerId,
     'username'  => 'oli',
     'name'      => 'Oli',
 ]);
@@ -42,7 +43,7 @@ $volunteer = new Member([
 
 $wallet = new \Rphaven\Gsts\V1\Wallet([
     'id' => UuidV6::v6()->toBinary(),
-    'player' => $player
+    'member' => $player
 ]);
 
 $now = new Timestamp();
@@ -71,13 +72,17 @@ $meet = new Meet([
     'venue' => $venue,
 ]);
 
-$consumeMemberToken = new ConsumeMemberToken([
+$consumptionDetails = new ConsumptionDetails([
     'wallet' => $wallet,
     'volunteer' => $volunteer,
     'meet'  => $meet,
+]);
+
+$consumeMemberToken = new ConsumeMemberToken([
+    'consumption_details' => $consumptionDetails,
     'tokens' => [$token]
 ]);
 
 $result = $client->session($consumeMemberToken)->wait();
 
-var_dump($result);
+var_dump($result[0]->serializeToJsonString());

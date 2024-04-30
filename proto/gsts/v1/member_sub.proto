@@ -8,10 +8,14 @@ import "gsts/v1/meet.proto";
 import "gsts/v1/token.proto";
 
 message ConsumeMemberToken {
+  ConsumptionDetails consumption_details = 1;
+  repeated Token tokens = 2;
+}
+
+message ConsumptionDetails {
   Wallet wallet = 1;
   Member volunteer = 2;
   Meet meet = 3;
-  repeated Token tokens = 4;
 }
 
 message TokenConsumption {
@@ -28,9 +32,8 @@ message TokensConsumed {
 message TokenTransaction {
   bytes transaction_id = 1;
   google.protobuf.Timestamp timestamp = 2;
-  Member member = 3;
-  Member volunteer = 4;
-  repeated Token tokens = 5;
+  ConsumptionDetails consumption_details = 3;
+  repeated Token tokens = 4;
 }
 
 message TokensNotConsumed {

@@ -8,6 +8,6 @@ package rphaven.gsts.v1;
 import "gsts/v1/member_sub.proto";
 
 service SubsService {
-  rpc Session (ConsumeMemberToken) returns (TokensConsumed) {
+  rpc Session (ConsumeMemberToken) returns (TokenConsumption) {
   }
 }
