@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.common.v1;
+
+import "google/protobuf/timestamp.proto";
+import "rphaven/common/v1/uid.proto";
+
+message Correlation {
+  Uid id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}

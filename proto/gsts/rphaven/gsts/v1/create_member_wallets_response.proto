@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+
+message CreateMemberWalletsResponse {
+  rphaven.common.v1.Correlation correlation = 1;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rphaven.common.v1;
+
+message Uid {
+ oneof id {
+   bytes binary = 1;
+   string rfc4122 = 2;
+ }
+}

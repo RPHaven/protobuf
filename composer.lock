@@ -285,16 +285,16 @@
         },
         {
             "name": "spiral/roadrunner",
-            "version": "v2024.1.0",
+            "version": "v2024.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roadrunner-server/roadrunner.git",
-                "reference": "c0d3df2b33bc2a9e9726dbbd73d7fe125ab9d045"
+                "reference": "9d73edf285ec84beb6673d59823aa654b12aefff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/c0d3df2b33bc2a9e9726dbbd73d7fe125ab9d045",
-                "reference": "c0d3df2b33bc2a9e9726dbbd73d7fe125ab9d045",
+                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/9d73edf285ec84beb6673d59823aa654b12aefff",
+                "reference": "9d73edf285ec84beb6673d59823aa654b12aefff",
                 "shasum": ""
             },
             "type": "metapackage",
@@ -323,7 +323,7 @@
                 "docs": "https://roadrunner.dev/docs",
                 "forum": "https://forum.roadrunner.dev/",
                 "issues": "https://github.com/roadrunner-server/roadrunner/issues",
-                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2024.1.0"
+                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2024.1.1"
             },
             "funding": [
                 {
@@ -331,7 +331,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-11T16:32:14+00:00"
+            "time": "2024-05-02T16:33:48+00:00"
         },
         {
             "name": "spiral/roadrunner-grpc",
@@ -1280,16 +1280,16 @@
         },
         {
             "name": "rphaven/uid",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RPHaven/uid.git",
-                "reference": "9c3e7b2b2e0f478afdc8c192d25e8b1a504e5671"
+                "reference": "1d8299d7c4f3a7a7324d4e48cc4eff5fefc4738d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RPHaven/uid/zipball/9c3e7b2b2e0f478afdc8c192d25e8b1a504e5671",
-                "reference": "9c3e7b2b2e0f478afdc8c192d25e8b1a504e5671",
+                "url": "https://api.github.com/repos/RPHaven/uid/zipball/1d8299d7c4f3a7a7324d4e48cc4eff5fefc4738d",
+                "reference": "1d8299d7c4f3a7a7324d4e48cc4eff5fefc4738d",
                 "shasum": ""
             },
             "require": {
@@ -1314,23 +1314,23 @@
             ],
             "description": "Library of common functionality surrounding UIDs (in the form of UUIDs and ULIDs)",
             "support": {
-                "source": "https://github.com/RPHaven/uid/tree/0.1.0",
+                "source": "https://github.com/RPHaven/uid/tree/0.2.0",
                 "issues": "https://github.com/RPHaven/uid/issues"
             },
-            "time": "2024-04-11T18:58:05+00:00"
+            "time": "2024-04-23T11:54:34+00:00"
         },
         {
             "name": "symfony/dotenv",
-            "version": "v7.0.4",
+            "version": "v7.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "8017ea2f0ff4fbda6ae1bf3f5409d5ecff982067"
+                "reference": "0fd573c141e1990848702d56329050efd5bf25cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/8017ea2f0ff4fbda6ae1bf3f5409d5ecff982067",
-                "reference": "8017ea2f0ff4fbda6ae1bf3f5409d5ecff982067",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/0fd573c141e1990848702d56329050efd5bf25cc",
+                "reference": "0fd573c141e1990848702d56329050efd5bf25cc",
                 "shasum": ""
             },
             "require": {
@@ -1375,7 +1375,7 @@
                 "environment"
             ],
             "support": {
-                "source": "https://github.com/symfony/dotenv/tree/v7.0.4"
+                "source": "https://github.com/symfony/dotenv/tree/v7.0.7"
             },
             "funding": [
                 {
@@ -1391,7 +1391,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-09T10:53:15+00:00"
+            "time": "2024-04-18T09:29:19+00:00"
         },
         {
             "name": "symfony/polyfill-uuid",
@@ -1474,16 +1474,16 @@
         },
         {
             "name": "symfony/uid",
-            "version": "v7.0.3",
+            "version": "v7.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/uid.git",
-                "reference": "87cedaf3fabd7b733859d4d77aa4ca598259054b"
+                "reference": "4f3a5d181999e25918586c8369de09e7814e7be2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/uid/zipball/87cedaf3fabd7b733859d4d77aa4ca598259054b",
-                "reference": "87cedaf3fabd7b733859d4d77aa4ca598259054b",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/4f3a5d181999e25918586c8369de09e7814e7be2",
+                "reference": "4f3a5d181999e25918586c8369de09e7814e7be2",
                 "shasum": ""
             },
             "require": {
@@ -1528,7 +1528,7 @@
                 "uuid"
             ],
             "support": {
-                "source": "https://github.com/symfony/uid/tree/v7.0.3"
+                "source": "https://github.com/symfony/uid/tree/v7.0.7"
             },
             "funding": [
                 {
@@ -1544,7 +1544,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-23T15:02:46+00:00"
+            "time": "2024-04-18T09:29:19+00:00"
         }
     ],
     "aliases": [],

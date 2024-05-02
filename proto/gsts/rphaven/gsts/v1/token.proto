@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "google/protobuf/timestamp.proto";
+import "rphaven/gsts/v1/token_signatuure.proto";
+import "rphaven/common/v1/uid.proto";
+
+message Token {
+  rphaven.common.v1.Uid id = 1;
+  google.protobuf.Timestamp issued = 2;
+  sint32 issue_number = 3;
+  rphaven.common.v1.Uid member = 4;
+  TokenSignature signature = 5;
+  optional google.protobuf.Timestamp consumed = 6;
+}

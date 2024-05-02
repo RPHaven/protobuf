@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/token_issue_transaction.proto";
+
+message TokensIssued {
+  TokenIssueTransaction transaction = 1;
+}

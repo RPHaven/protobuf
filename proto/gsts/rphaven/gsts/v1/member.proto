@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/uid.proto";
+
+message Member {
+  rphaven.common.v1.Uid id = 1;
+  string username = 2;
+  string name = 3;
+}

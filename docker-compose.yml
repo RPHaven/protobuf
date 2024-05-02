@@ -9,7 +9,7 @@ services:
       args:
         GITHUB_TOKEN: "${GITHUB_TOKEN}"
     environment:
-      - "SUBS_SERVER=${SUBS_SERVER}"
+      - "GSTS_SERVER=${GSTS_SERVER}"
     volumes:
       - ./:/RPHaven
     networks:

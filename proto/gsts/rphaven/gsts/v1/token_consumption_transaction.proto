@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "google/protobuf/timestamp.proto";
+import "rphaven/gsts/v1/consumption_details.proto";
+import "rphaven/gsts/v1/token.proto";
+import "rphaven/common/v1/uid.proto";
+
+message TokenConsumptionTransaction {
+  rphaven.common.v1.Uid id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  ConsumptionDetails consumption_details = 3;
+  repeated Token tokens = 4;
+}

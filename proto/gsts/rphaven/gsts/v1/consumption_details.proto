@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/meet.proto";
+import "rphaven/gsts/v1/member.proto";
+import "rphaven/gsts/v1/wallet.proto";
+
+message ConsumptionDetails {
+  Wallet wallet = 1;
+  Member volunteer = 2;
+  Meet meet = 3;
+}

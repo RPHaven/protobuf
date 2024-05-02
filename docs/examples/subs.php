@@ -19,7 +19,7 @@ require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 (new Dotenv())->bootEnv(dirname(__DIR__, 2) . '/.env');
 
-$client = new SubsServiceClient(getenv('SUBS_SERVER'), [
+$client = new SubsServiceClient(getenv('GSTS_SERVER'), [
     'credentials' => Grpc\ChannelCredentials::createInsecure()
 ]);
 

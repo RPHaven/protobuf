@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rphaven.common.v1;
+
+import "google/protobuf/timestamp.proto";
+import "rphaven/common/v1/uid.proto";
+
+message Error {
+  Uid id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  string reason = 3;
+  optional sint32 code = 4;
+}

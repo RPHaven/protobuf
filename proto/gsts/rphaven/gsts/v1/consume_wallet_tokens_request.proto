@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+import "rphaven/gsts/v1/consumption_details.proto";
+import "rphaven/gsts/v1/token.proto";
+
+message ConsumeWalletTokensRequest {
+  rphaven.common.v1.Correlation correlation = 1;
+  ConsumptionDetails consumption_details = 2;
+  repeated Token tokens = 3;
+}

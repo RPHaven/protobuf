@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+import "rphaven/gsts/v1/tokens_issued.proto";
+import "rphaven/gsts/v1/tokens_not_issued.proto";
+
+message IssueWalletTokensResponse {
+  rphaven.common.v1.Correlation correlation = 1;
+  oneof result {
+    TokensIssued success = 2;
+    TokensNotIssued error = 3;
+  }
+}
+

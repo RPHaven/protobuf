@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "google/protobuf/timestamp.proto";
+import "rphaven/gsts/v1/token.proto";
+import "rphaven/gsts/v1/wallet.proto";
+import "rphaven/common/v1/uid.proto";
+
+message TokenIssueTransaction {
+  rphaven.common.v1.Uid id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  Wallet wallet = 3;
+  repeated Token tokens = 4;
+}

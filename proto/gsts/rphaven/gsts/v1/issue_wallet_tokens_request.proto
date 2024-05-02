@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+import "rphaven/gsts/v1/wallet.proto";
+
+message IssueWalletTokensRequest {
+  rphaven.common.v1.Correlation correlation = 1;
+  Wallet wallet = 2;
+  sint32 number = 3;
+}

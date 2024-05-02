@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/token_consumption_transaction.proto";
+import "rphaven/common/v1/error.proto";
+
+message TokensNotConsumed {
+  TokenConsumptionTransaction transaction = 1;
+  repeated rphaven.common.v1.Error errors = 2;
+}

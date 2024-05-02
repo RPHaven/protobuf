@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/create_member_wallets_request.proto";
+import "rphaven/gsts/v1/create_member_wallets_response.proto";
+
+service CreateMemberWalletsService {
+  rpc CreateMemberWallets (CreateMemberWalletsRequest) returns (CreateMemberWalletsResponse) {
+  }
+}

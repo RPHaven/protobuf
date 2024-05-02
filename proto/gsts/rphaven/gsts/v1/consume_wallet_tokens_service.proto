@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/consume_wallet_tokens_request.proto";
+import "rphaven/gsts/v1/consume_wallet_tokens_response.proto";
+
+service ConsumeWalletTokensService {
+  rpc ConsumeWalletTokens (ConsumeWalletTokensRequest) returns (ConsumeWalletTokensResponse) {
+  }
+}

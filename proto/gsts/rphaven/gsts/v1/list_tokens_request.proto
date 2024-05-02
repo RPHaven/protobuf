@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+import "rphaven/gsts/v1/wallet.proto";
+
+message ListTokensRequest {
+  rphaven.common.v1.Correlation correlation = 1;
+  repeated Wallet wallets = 2;
+}

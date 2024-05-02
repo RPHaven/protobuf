@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/uid.proto";
+import "rphaven/gsts/v1/venue_meet.proto";
+import "rphaven/gsts/v1/virtual_meet.proto";
+
+message Meet {
+  rphaven.common.v1.Uid id = 1;
+  string name = 2;
+  oneof meet {
+    VenueMeet venue = 3;
+    VirtualMeet virtual = 4;
+  }
+}
+

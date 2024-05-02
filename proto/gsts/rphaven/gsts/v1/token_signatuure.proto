@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/uid.proto";
+
+message TokenSignature {
+  rphaven.common.v1.Uid key = 1;
+  bytes hash = 2;
+}

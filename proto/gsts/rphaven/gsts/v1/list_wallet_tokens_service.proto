@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/list_tokens_request.proto";
+import "rphaven/gsts/v1/list_tokens_response.proto";
+
+service ListWalletTokensService {
+  rpc ListTokens (ListTokensRequest) returns (ListTokensResponse) {
+
+  }
+}

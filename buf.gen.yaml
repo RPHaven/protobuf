@@ -5,8 +5,8 @@ managed:
 plugins:
   # dependencies
   - plugin: buf.build/community/roadrunner-server-php-grpc:v4.6.7
-    out: php
+    out: ../php
   - plugin: buf.build/protocolbuffers/php:v26.1
-    out: php
+    out: ../php
   - plugin: buf.build/grpc/php:v1.62.1
-    out: php
+    out: ../php

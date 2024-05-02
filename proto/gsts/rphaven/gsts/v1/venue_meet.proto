@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+message VenueMeet {
+  // The latitude in degrees. It must be in the range [-90.0, +90.0].
+  double latitude = 1;
+
+  // The longitude in degrees. It must be in the range [-180.0, +180.0].
+  double longitude = 2;
+  int32 accuracy = 3;
+}

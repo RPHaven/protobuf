@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/member.proto";
+import "rphaven/common/v1/uid.proto";
+
+message Wallet {
+  rphaven.common.v1.Uid id = 1;
+  Member member = 2;
+}

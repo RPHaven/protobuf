@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/gsts/v1/wallet.proto";
+import "rphaven/gsts/v1/token.proto";
+
+message WalletTokens {
+  Wallet wallet = 1;
+  sint32 total = 2;
+  repeated Token tokens = 3;
+}

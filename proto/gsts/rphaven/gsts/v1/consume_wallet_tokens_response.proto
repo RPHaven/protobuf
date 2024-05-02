@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package rphaven.gsts.v1;
+
+import "rphaven/common/v1/correlation.proto";
+import "rphaven/gsts/v1/tokens_consumed.proto";
+import "rphaven/gsts/v1/tokens_not_consumed.proto";
+
+message ConsumeWalletTokensResponse {
+  rphaven.common.v1.Correlation correlation = 1;
+  oneof result {
+    TokensConsumed success = 2;
+    TokensNotConsumed error = 3;
+  }
+}
+

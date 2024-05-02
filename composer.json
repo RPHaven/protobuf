@@ -28,7 +28,8 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-0": {
-      "Rphaven\\Gsts\\V1\\": "php/"
+      "Rphaven\\Gsts\\V1\\": "php/Rphaven/Gsts",
+      "Rphaven\\Common\\V1\\": "php/Rphaven/Common"
     }
   },
   "config": {
