@@ -13,6 +13,10 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class Uid extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>.rphaven.common.v1.UidType type = 1 [json_name = "type"];</code>
+     */
+    protected $type = 0;
     protected $id;
 
     /**
@@ -21,6 +25,7 @@ class Uid extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int $type
      *     @type string $binary
      *     @type string $rfc4122
      * }
@@ -31,55 +36,77 @@ class Uid extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes binary = 1 [json_name = "binary"];</code>
+     * Generated from protobuf field <code>.rphaven.common.v1.UidType type = 1 [json_name = "type"];</code>
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.rphaven.common.v1.UidType type = 1 [json_name = "type"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setType($var)
+    {
+        GPBUtil::checkEnum($var, \Rphaven\Common\V1\UidType::class);
+        $this->type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes binary = 2 [json_name = "binary"];</code>
      * @return string
      */
     public function getBinary()
     {
-        return $this->readOneof(1);
+        return $this->readOneof(2);
     }
 
     public function hasBinary()
     {
-        return $this->hasOneof(1);
+        return $this->hasOneof(2);
     }
 
     /**
-     * Generated from protobuf field <code>bytes binary = 1 [json_name = "binary"];</code>
+     * Generated from protobuf field <code>bytes binary = 2 [json_name = "binary"];</code>
      * @param string $var
      * @return $this
      */
     public function setBinary($var)
     {
         GPBUtil::checkString($var, False);
-        $this->writeOneof(1, $var);
+        $this->writeOneof(2, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string rfc4122 = 2 [json_name = "rfc4122"];</code>
+     * Generated from protobuf field <code>string rfc4122 = 3 [json_name = "rfc4122"];</code>
      * @return string
      */
     public function getRfc4122()
     {
-        return $this->readOneof(2);
+        return $this->readOneof(3);
     }
 
     public function hasRfc4122()
     {
-        return $this->hasOneof(2);
+        return $this->hasOneof(3);
     }
 
     /**
-     * Generated from protobuf field <code>string rfc4122 = 2 [json_name = "rfc4122"];</code>
+     * Generated from protobuf field <code>string rfc4122 = 3 [json_name = "rfc4122"];</code>
      * @param string $var
      * @return $this
      */
     public function setRfc4122($var)
     {
         GPBUtil::checkString($var, True);
-        $this->writeOneof(2, $var);
+        $this->writeOneof(3, $var);
 
         return $this;
     }

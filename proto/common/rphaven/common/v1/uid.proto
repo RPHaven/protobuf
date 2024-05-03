@@ -3,8 +3,14 @@ syntax = "proto3";
 package rphaven.common.v1;
 
 message Uid {
+  UidType type = 1;
  oneof id {
-   bytes binary = 1;
-   string rfc4122 = 2;
+   bytes binary = 2;
+   string rfc4122 = 3;
  }
+}
+
+enum UidType {
+  UID_TYPE_UUID = 0;
+  UID_TYPE_ULID = 1;
 }

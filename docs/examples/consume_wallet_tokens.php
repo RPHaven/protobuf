@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Google\Protobuf\Timestamp;
 use Rphaven\Gsts\V1\ConsumeMemberToken;
+use Rphaven\Gsts\V1\ConsumeWalletTokensServiceClient;
 use Rphaven\Gsts\V1\ConsumptionDetails;
 use Rphaven\Gsts\V1\Meet;
 use Rphaven\Gsts\V1\Member;
@@ -19,7 +20,7 @@ require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 (new Dotenv())->bootEnv(dirname(__DIR__, 2) . '/.env');
 
-$client = new SubsServiceClient(getenv('GSTS_SERVER'), [
+$client = new ConsumeWalletTokensServiceClient(getenv('GSTS_SERVER'), [
     'credentials' => Grpc\ChannelCredentials::createInsecure()
 ]);
 
