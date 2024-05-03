@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46c490aaf20dface331af217563a50fa",
+    "content-hash": "ba5ae08b9d4a6bca076996e2f1aff472",
     "packages": [
         {
             "name": "google/common-protos",
@@ -195,6 +195,70 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "rphaven/common-app",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RPHaven/common-app.git",
+                "reference": "9d0f64db204c939f47d41af25fd26384718bd88b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RPHaven/common-app/zipball/9d0f64db204c939f47d41af25fd26384718bd88b",
+                "reference": "9d0f64db204c939f47d41af25fd26384718bd88b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "ergebnis/composer-normalize": "*",
+                "infection/infection": "*",
+                "phpspec/prophecy-phpunit": "*",
+                "phpstan/phpstan": "*",
+                "phpunit/php-code-coverage": "*",
+                "phpunit/phpcov": "*",
+                "phpunit/phpunit": "*",
+                "squizlabs/php_codesniffer": "*",
+                "vimeo/psalm": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "composer-normalize": {
+                    "indent-size": 2,
+                    "indent-style": "space"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RpHaven\\App\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\Mocks\\": "tests/mocks",
+                    "Tests\\Unit\\": "tests/unit/src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barney Hanlon",
+                    "email": "barney@shrikeh.net"
+                }
+            ],
+            "description": "Library of common interfaces and traits for Applications",
+            "support": {
+                "source": "https://github.com/RPHaven/common-app/tree/main",
+                "issues": "https://github.com/RPHaven/common-app/issues"
+            },
+            "time": "2024-05-03T13:19:54+00:00"
         },
         {
             "name": "spiral/goridge",
@@ -3698,7 +3762,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rphaven/common-app": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -9,11 +9,13 @@
       "email": "barney@shrikeh.net"
     }
   ],
+
   "require": {
     "php": ">=8.3",
     "ext-grpc": "*",
     "google/protobuf": "^3.25",
     "grpc/grpc": "^1.57",
+    "rphaven/common-app": "dev-main",
     "spiral/roadrunner-grpc": "^3.2"
   },
   "require-dev": {
@@ -55,6 +57,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/rphaven/uid"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/rphaven/common-app"
     }
   ]
 }
