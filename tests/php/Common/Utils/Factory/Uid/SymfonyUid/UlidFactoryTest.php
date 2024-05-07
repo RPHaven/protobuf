@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Common\Utils\Factory\Uid\SymfonyUid;
 
 use PHPUnit\Framework\TestCase;
-use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactory;
+use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactoryGrpc;
 use Rphaven\Common\V1\Uid;
 use Rphaven\Common\V1\UidType;
 use Symfony\Component\Uid\Ulid;
@@ -20,7 +20,7 @@ final class UlidFactoryTest extends TestCase
             'type' => UidType::UID_TYPE_ULID,
         ]);
 
-        $uidFactory = new UlidFactory();
+        $uidFactory = new UlidFactoryGrpc();
         $ulid = $uidFactory->fromGrpc($uid);
 
         $this->assertTrue($rfc4122->equals($ulid));
@@ -34,7 +34,7 @@ final class UlidFactoryTest extends TestCase
             'type' => UidType::UID_TYPE_ULID,
         ]);
 
-        $uidFactory = new UlidFactory();
+        $uidFactory = new UlidFactoryGrpc();
         $ulid = $uidFactory->fromGrpc($uid);
 
         $this->assertTrue($rfc4122->equals($ulid));

@@ -6,7 +6,7 @@ namespace Rphaven\Common\Utils\Factory;
 
 use DateTimeImmutable;
 use DateTimeInterface;
-use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactory;
+use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactoryGrpc;
 use Rphaven\Common\Utils\Uid\ErrorId;
 use Rphaven\Common\V1\Error;
 
@@ -15,7 +15,7 @@ use Stringable;
 final readonly class ErrorFactory
 {
     public function __construct(
-        private UlidFactory $ulidFactory,
+        private UlidFactoryGrpc  $ulidFactory,
         private TimestampFactory $timestampFactory,
     ) {
 

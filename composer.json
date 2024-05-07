@@ -16,13 +16,13 @@
     "google/protobuf": "^3.25",
     "grpc/grpc": "^1.57",
     "rphaven/common-app": "dev-main",
+    "rphaven/uid": "dev-main",
     "spiral/roadrunner-grpc": "^3.2"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.42",
     "symfony/uid": "^7.0",
     "symfony/dotenv": "^7.0",
-    "rphaven/uid": "*",
     "phpunit/phpunit": "^11.1",
     "phpspec/prophecy-phpunit": "^2.2"
   },

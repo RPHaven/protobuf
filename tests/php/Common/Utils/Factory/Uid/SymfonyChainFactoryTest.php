@@ -7,7 +7,7 @@ namespace Tests\Unit\Common\Utils\Factory\Uid;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
-use Rphaven\Common\Utils\Factory\Uid\SymfonyChainFactory;
+use Rphaven\Common\Utils\Factory\Uid\ChainFactoryFactoryGrpc;
 use Rphaven\Common\V1\Uid;
 use Rphaven\Common\V1\UidType;
 use Symfony\Component\Uid\Ulid;
@@ -19,7 +19,7 @@ final class SymfonyChainFactoryTest extends TestCase
     {
         $ulid = Ulid::fromString(Ulid::generate());
 
-        $chainFactory = SymfonyChainFactory::init();
+        $chainFactory = ChainFactoryFactoryGrpc::init();
 
         $uid = new Uid([
             'type' => UidType::UID_TYPE_ULID,

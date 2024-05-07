@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rphaven\Common\Utils\Factory;
 
 use RpHaven\App\Correlation;
-use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactory;
+use Rphaven\Common\Utils\Factory\Uid\SymfonyUid\UlidFactoryGrpc;
 use Rphaven\Common\Utils\Uid\CorrelationUlid;
 use Rphaven\Common\V1\Correlation as GrpcCorrelation;
 use Symfony\Component\Uid\Ulid;
@@ -13,7 +13,7 @@ use Symfony\Component\Uid\Ulid;
 
 final readonly class CorrelationFactory
 {
-    public function __construct(private UlidFactory $ulidFactory, private TimestampFactory $timestampFactory)
+    public function __construct(private UlidFactoryGrpc $ulidFactory, private TimestampFactory $timestampFactory)
     {
 
     }

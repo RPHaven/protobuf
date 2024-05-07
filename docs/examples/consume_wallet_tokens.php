@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Google\Protobuf\Timestamp;
+use Rphaven\Common\Utils\Factory\Uid\ChainFactoryFactoryGrpc;
 use Rphaven\Gsts\V1\ConsumeMemberToken;
 use Rphaven\Gsts\V1\ConsumeWalletTokensServiceClient;
 use Rphaven\Gsts\V1\ConsumptionDetails;
@@ -25,6 +26,7 @@ $client = new ConsumeWalletTokensServiceClient(getenv('GSTS_SERVER'), [
 ]);
 
 $memberFactory = new MemberUid();
+$uidFactory = ChainFactoryFactoryGrpc::init();
 
 $volunteerId = $memberFactory->member(new DateTimeImmutable('-48 hours'))->toBinary();
 $playerId = $memberFactory->member(new DateTimeImmutable('-1 years'))->toBinary();
