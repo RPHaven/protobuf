@@ -15,8 +15,6 @@
     "ext-grpc": "*",
     "google/protobuf": "^3.25",
     "grpc/grpc": "^1.57",
-    "rphaven/common-app": "dev-main",
-    "rphaven/uid": "dev-main",
     "spiral/roadrunner-grpc": "^3.2"
   },
   "require-dev": {
@@ -29,12 +27,11 @@
   "archive": {
     "exclude": ["*", "!/php", "!/proto"]
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Rphaven\\Gsts\\V1\\": "php/Rphaven/Gsts/V1",
-      "Rphaven\\Common\\V1\\": "php/Rphaven/Common/V1",
-      "Rphaven\\Common\\Utils\\": "php/Rphaven/Common/Utils"
+      "Rphaven\\Common\\V1\\": "php/Rphaven/Common/V1"
     }
   },
   "autoload-dev": {
@@ -61,6 +58,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/rphaven/common-app"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/rphaven/app-symfony"
     }
   ]
 }
